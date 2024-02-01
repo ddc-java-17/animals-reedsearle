@@ -1,7 +1,13 @@
 package edu.cnm.deepdive.animals;
 
-public class Dog extends Wolf {
 
+public class Dog extends Wolf {
+  static {
+    System.out.println("Dog static block");
+  }
+  {
+    System.out.println("Dog Inst init block");
+  }
   protected Dog(String name) {
     super(name);
   }

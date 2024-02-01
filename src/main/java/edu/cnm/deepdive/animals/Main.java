@@ -8,15 +8,17 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) {
+//    Dog.describe();
     List<Canis> animals = new ArrayList<>();
     Collections.addAll(
         animals,
-        new Wolf("Buck"),
+/*        new Wolf("Buck"),
         new Dog("Rex"),
         new Wolf("Balto"),
-        new Dog("Fido")
+ */       new Dog("Fido")
         );
 
+/*
     for (Canis c : animals) {
       introduce(c);
     }
@@ -24,6 +26,7 @@ public class Main {
     Collections.shuffle(animals);
 
     animals.forEach(Main::introduce);
+*/
   }
 
   private static void introduce(Canis c) {

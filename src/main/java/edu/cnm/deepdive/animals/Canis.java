@@ -2,11 +2,19 @@ package edu.cnm.deepdive.animals;
 
 public abstract class Canis {
 
+  private static int helperValue = helper();
   private final String name;
-
+  static {
+    System.out.println("Canus STATIC block");
+  }
+  {
+    System.out.println("Canus Instance init block");
+  }
   protected Canis(String name) {
+    System.out.println("Canus::<init>");
     this.name = name;
   }
+  private final int instHelperValue = helper();
 
   public abstract void hunt();
   public  void vocalize(){
@@ -24,4 +32,17 @@ public abstract class Canis {
   public String toString() {
     return "%1$s[name=%2$s]".formatted(getClass().getSimpleName(), name);
   }
+
+  private static int helper(){
+    System.out.println("Canis::helper");
+    return 0;
+  }
+
+  private static int helperValue2 = helper();
+
+  static {
+    System.out.println("Canus 2nd block");
+  }
+
 }
+
